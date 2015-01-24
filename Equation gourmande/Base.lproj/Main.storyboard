@@ -18,37 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K51-ff-9H7">
-                                <rect key="frame" x="74" y="385" width="70" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="titleLabel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K51-ff-9H7">
+                                <rect key="frame" x="16" y="385" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-yL-gfy">
-                                <rect key="frame" x="74" y="414" width="453" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25e-Og-Ycn">
+                                <rect key="frame" x="16" y="414" width="568" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPb-01-OH2" customClass="UIImageViewModeScaleAspect">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="wPb-01-OH2" secondAttribute="trailing" constant="-16" id="3vt-22-Zze"/>
-                            <constraint firstItem="23h-dc-coC" firstAttribute="top" secondItem="wPb-01-OH2" secondAttribute="bottom" constant="251" id="LkK-cu-m2a"/>
-                            <constraint firstItem="wPb-01-OH2" firstAttribute="leading" secondItem="pA2-CE-iPf" secondAttribute="leadingMargin" constant="-16" id="ogy-Mf-1Tm"/>
-                            <constraint firstItem="wPb-01-OH2" firstAttribute="top" secondItem="pA2-CE-iPf" secondAttribute="topMargin" id="yPF-sv-GDG"/>
+                            <constraint firstItem="K51-ff-9H7" firstAttribute="top" secondItem="bfB-Vk-QJo" secondAttribute="bottom" constant="365" id="BWp-hm-EZN"/>
+                            <constraint firstItem="25e-Og-Ycn" firstAttribute="leading" secondItem="pA2-CE-iPf" secondAttribute="leadingMargin" id="U2b-8U-3Ki"/>
+                            <constraint firstItem="23h-dc-coC" firstAttribute="top" secondItem="25e-Og-Ycn" secondAttribute="bottom" constant="15" id="XBF-ex-8gD"/>
+                            <constraint firstItem="25e-Og-Ycn" firstAttribute="trailing" secondItem="pA2-CE-iPf" secondAttribute="trailingMargin" id="jhd-tT-dEb"/>
+                            <constraint firstItem="25e-Og-Ycn" firstAttribute="top" secondItem="K51-ff-9H7" secondAttribute="bottom" constant="8" id="vOw-Vw-ktm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recette de la semaine" image="first" id="8dn-jN-hLk"/>
                     <navigationItem key="navigationItem" id="AsY-Tl-CNd"/>
                     <connections>
-                        <outlet property="descriptionTextView" destination="bVe-yL-gfy" id="jnn-el-xq4"/>
-                        <outlet property="photoImageView" destination="wPb-01-OH2" id="b14-W2-OuF"/>
+                        <outlet property="descriptionTextView" destination="25e-Og-Ycn" id="lQh-AI-dQc"/>
                         <outlet property="titleLabel" destination="K51-ff-9H7" id="CFk-ah-Tmt"/>
                     </connections>
                 </viewController>
