@@ -1,4 +1,4 @@
-platform :ios, '8.1'
+platform :ios, '7.0'
 pod 'AFNetworking', '~> 2.5'
 pod 'MBProgressHUD', '~> 0.8'
 pod 'InAppSettingsKit', '~> 2.0.1'
