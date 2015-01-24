@@ -19,12 +19,15 @@ class FirstViewController: UIViewController {
     private var myImage : UIImageViewModeScaleAspect!
     private var photoDisposition : CGRect!
     
+    private var database : LevelDB!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Mise en place de la disposition par défaut
         photoDisposition = CGRectMake(self.view.frame.minX, self.view.frame.minY, self.view.frame.size.width, self.view.frame.size.height / 2)
+        database = LevelDB(path: "/db", andName: DatabaseConstants.DATABASE_NAME)
         
         titleLabel.text = "Sandwitch au caca";
         descriptionTextView.text = "Cette semaine nous allons voir la recette du sandwitch au caca. La recette de la poire à lavement d'hier" +
@@ -39,7 +42,7 @@ class FirstViewController: UIViewController {
             NSLog("oui")
             NSLog("Tentative d'ajout de l'image")
             myImage.image = image
-            myImage.backgroundColor = UIColor.blackColor()
+            myImage.backgroundColor = .blackColor()
             self.view.addSubview(myImage)
         }
         
@@ -48,12 +51,7 @@ class FirstViewController: UIViewController {
     }
     
     func animateImage(recognizer:UITapGestureRecognizer) {
-        ////////////////////////
-        //
-        // Use automatic function to animate
-        //
-        ////////////////////////
-        
+
         if myImage.contentMode == .ScaleAspectFit {
             myImage.animateToScaleAspectFillToFrame(photoDisposition, withDuration: 0.4, afterDelay: 0.0)
         }

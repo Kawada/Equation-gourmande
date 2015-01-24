@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27124E3B1A7411110032058B /* DatabaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27124E3A1A7411110032058B /* DatabaseConstants.swift */; };
 		27CCE5891A7144FC006B6357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE5881A7144FC006B6357 /* AppDelegate.swift */; };
 		27CCE58B1A7144FC006B6357 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE58A1A7144FC006B6357 /* FirstViewController.swift */; };
 		27CCE58D1A7144FC006B6357 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE58C1A7144FC006B6357 /* SecondViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		0578C7FEA011B34E21EEB795 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		27044C471A73DDEB002CCE28 /* Equation gourmande-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Equation gourmande-Bridging-Header.h"; sourceTree = "<group>"; };
+		27124E3A1A7411110032058B /* DatabaseConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseConstants.swift; sourceTree = "<group>"; };
 		27CCE5831A7144FB006B6357 /* Equation gourmande.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Equation gourmande.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CCE5871A7144FC006B6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CCE5881A7144FC006B6357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,11 +66,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27044C451A73DCAE002CCE28 /* headers */ = {
+		27044C451A73DCAE002CCE28 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27CCE58A1A7144FC006B6357 /* FirstViewController.swift */,
+				27CCE58C1A7144FC006B6357 /* SecondViewController.swift */,
 			);
-			name = headers;
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		27124E391A7410F50032058B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				27124E3A1A7411110032058B /* DatabaseConstants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		27CCE57A1A7144FB006B6357 = {
@@ -94,10 +106,9 @@
 		27CCE5851A7144FB006B6357 /* Equation gourmande */ = {
 			isa = PBXGroup;
 			children = (
-				27044C451A73DCAE002CCE28 /* headers */,
+				27124E391A7410F50032058B /* Constants */,
+				27044C451A73DCAE002CCE28 /* Controllers */,
 				27CCE5881A7144FC006B6357 /* AppDelegate.swift */,
-				27CCE58A1A7144FC006B6357 /* FirstViewController.swift */,
-				27CCE58C1A7144FC006B6357 /* SecondViewController.swift */,
 				27CCE58E1A7144FC006B6357 /* Main.storyboard */,
 				27CCE5911A7144FC006B6357 /* Images.xcassets */,
 				27CCE5931A7144FC006B6357 /* LaunchScreen.xib */,
@@ -284,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27124E3B1A7411110032058B /* DatabaseConstants.swift in Sources */,
 				27CCE58D1A7144FC006B6357 /* SecondViewController.swift in Sources */,
 				27CCE5891A7144FC006B6357 /* AppDelegate.swift in Sources */,
 				27CCE58B1A7144FC006B6357 /* FirstViewController.swift in Sources */,
