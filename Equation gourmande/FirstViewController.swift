@@ -9,10 +9,24 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    @IBOutlet var photoImageView: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var descriptionTextView: UITextView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        titleLabel.text = "BLA";
+        descriptionTextView.text = "Bla description";
+
+        
+        if let image = UIImage(named: "photo_main_example") {
+            photoImageView?.image = image;
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

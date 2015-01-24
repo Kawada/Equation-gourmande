@@ -14,6 +14,7 @@
 		27CCE5921A7144FC006B6357 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CCE5911A7144FC006B6357 /* Images.xcassets */; };
 		27CCE5951A7144FC006B6357 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CCE5931A7144FC006B6357 /* LaunchScreen.xib */; };
 		27CCE5A11A7144FC006B6357 /* Equation_gourmandeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCE5A01A7144FC006B6357 /* Equation_gourmandeTests.swift */; };
+		ECDFFF56A72D332225353CB1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0793339DDDC22CE2E791F2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0578C7FEA011B34E21EEB795 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		27CCE5831A7144FB006B6357 /* Equation gourmande.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Equation gourmande.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CCE5871A7144FC006B6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CCE5881A7144FC006B6357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		27CCE59A1A7144FC006B6357 /* Equation gourmandeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equation gourmandeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CCE59F1A7144FC006B6357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CCE5A01A7144FC006B6357 /* Equation_gourmandeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equation_gourmandeTests.swift; sourceTree = "<group>"; };
+		3D0793339DDDC22CE2E791F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F85CD876B6018EA83E50DE9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECDFFF56A72D332225353CB1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				27CCE5851A7144FB006B6357 /* Equation gourmande */,
 				27CCE59D1A7144FC006B6357 /* Equation gourmandeTests */,
 				27CCE5841A7144FB006B6357 /* Products */,
+				93F239168A07F34F18625C69 /* Pods */,
+				93418D6DEFE6FC98A9E61BCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +122,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		93418D6DEFE6FC98A9E61BCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D0793339DDDC22CE2E791F2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93F239168A07F34F18625C69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0578C7FEA011B34E21EEB795 /* Pods.debug.xcconfig */,
+				8F85CD876B6018EA83E50DE9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27CCE5A41A7144FC006B6357 /* Build configuration list for PBXNativeTarget "Equation gourmande" */;
 			buildPhases = (
+				33478B8E79D4AF9B25A29DEE /* Check Pods Manifest.lock */,
 				27CCE57F1A7144FB006B6357 /* Sources */,
 				27CCE5801A7144FB006B6357 /* Frameworks */,
 				27CCE5811A7144FB006B6357 /* Resources */,
+				925C5149BB586949EF6984BA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +235,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33478B8E79D4AF9B25A29DEE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		925C5149BB586949EF6984BA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27CCE57F1A7144FB006B6357 /* Sources */ = {
@@ -338,9 +397,11 @@
 		};
 		27CCE5A51A7144FC006B6357 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0578C7FEA011B34E21EEB795 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Equation gourmande/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -348,9 +409,11 @@
 		};
 		27CCE5A61A7144FC006B6357 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F85CD876B6018EA83E50DE9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Equation gourmande/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -409,6 +472,7 @@
 				27CCE5A61A7144FC006B6357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27CCE5A71A7144FC006B6357 /* Build configuration list for PBXNativeTarget "Equation gourmandeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +481,7 @@
 				27CCE5A91A7144FC006B6357 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

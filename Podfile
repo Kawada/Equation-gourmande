@@ -1,0 +1,5 @@
+platform :ios, '8.1'
+pod 'AFNetworking', '~> 2.5'
+pod 'MBProgressHUD', '~> 0.8'
+pod 'InAppSettingsKit', '~> 2.0.1'
+pod 'UIImageViewModeScaleAspect'
