@@ -10,5 +10,7 @@ import Foundation
 
 public struct DatabaseConstants{
     static let DATABASE_NAME : String = "equation-gourmande-db.ldb"
+    
+    static let DATABASE_DIRECTORY : String = "/db"
 }
 

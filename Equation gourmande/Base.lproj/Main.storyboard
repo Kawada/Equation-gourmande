@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -18,13 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5n-k6-UYi" customClass="UIImageViewModeScaleAspect">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="306"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="titleLabel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K51-ff-9H7">
                                 <rect key="frame" x="16" y="385" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25e-Og-Ycn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25e-Og-Ycn">
                                 <rect key="frame" x="16" y="414" width="568" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -32,11 +36,16 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
                             </textView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iqA-Ny-tN9" customClass="DIDatepicker">
+                                <rect key="frame" x="0.0" y="314" width="600" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K51-ff-9H7" firstAttribute="top" secondItem="bfB-Vk-QJo" secondAttribute="bottom" constant="365" id="BWp-hm-EZN"/>
+                            <constraint firstItem="iqA-Ny-tN9" firstAttribute="top" secondItem="f5n-k6-UYi" secondAttribute="bottom" constant="8" id="J4r-Mk-dOP"/>
                             <constraint firstItem="25e-Og-Ycn" firstAttribute="leading" secondItem="pA2-CE-iPf" secondAttribute="leadingMargin" id="U2b-8U-3Ki"/>
+                            <constraint firstItem="K51-ff-9H7" firstAttribute="top" secondItem="iqA-Ny-tN9" secondAttribute="bottom" constant="8" id="Wum-k5-8wx"/>
                             <constraint firstItem="23h-dc-coC" firstAttribute="top" secondItem="25e-Og-Ycn" secondAttribute="bottom" constant="15" id="XBF-ex-8gD"/>
                             <constraint firstItem="25e-Og-Ycn" firstAttribute="trailing" secondItem="pA2-CE-iPf" secondAttribute="trailingMargin" id="jhd-tT-dEb"/>
                             <constraint firstItem="25e-Og-Ycn" firstAttribute="top" secondItem="K51-ff-9H7" secondAttribute="bottom" constant="8" id="vOw-Vw-ktm"/>
@@ -45,7 +54,9 @@
                     <tabBarItem key="tabBarItem" title="Recette de la semaine" image="first" id="8dn-jN-hLk"/>
                     <navigationItem key="navigationItem" id="AsY-Tl-CNd"/>
                     <connections>
+                        <outlet property="datepicker" destination="iqA-Ny-tN9" id="xiG-fV-kkP"/>
                         <outlet property="descriptionTextView" destination="25e-Og-Ycn" id="lQh-AI-dQc"/>
+                        <outlet property="myImage" destination="f5n-k6-UYi" id="rpw-fP-Xl6"/>
                         <outlet property="titleLabel" destination="K51-ff-9H7" id="CFk-ah-Tmt"/>
                     </connections>
                 </viewController>

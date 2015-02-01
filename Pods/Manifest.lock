@@ -1,0 +1,34 @@
+PODS:
+  - DIDatepicker (0.1)
+  - InAppSettingsKit (2.0.1)
+  - leveldb-library (1.18.1)
+  - MBProgressHUD (0.9)
+  - Objective-LevelDB (2.1.4):
+    - leveldb-library (~> 1.18)
+  - UIImageViewModeScaleAspect (1.3)
+
+DEPENDENCIES:
+  - DIDatepicker (from `https://github.com/noxt/DIDatepicker`)
+  - InAppSettingsKit (~> 2.0.1)
+  - MBProgressHUD (~> 0.8)
+  - Objective-LevelDB
+  - UIImageViewModeScaleAspect
+
+EXTERNAL SOURCES:
+  DIDatepicker:
+    :git: https://github.com/noxt/DIDatepicker
+
+CHECKOUT OPTIONS:
+  DIDatepicker:
+    :commit: f69f6e9eb81f0c8db856625deda392efcc4fec6a
+    :git: https://github.com/noxt/DIDatepicker
+
+SPEC CHECKSUMS:
+  DIDatepicker: 5937543e2ad8c72d49b4ddd0c3a6d5f4fb087133
+  InAppSettingsKit: e8c460b5e7ff310f3324d7d9536bb1935a507686
+  leveldb-library: 27d1c7bf65f324cc6f57e06fa9be32f02ac2b700
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  Objective-LevelDB: 338540e996029ac890bdebac4bb05eb259a8bf14
+  UIImageViewModeScaleAspect: 61ea5fbcbddab6ff8ae5fe86a657f9208dd19fda
+
+COCOAPODS: 0.35.0
