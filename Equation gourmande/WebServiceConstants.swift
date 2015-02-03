@@ -9,7 +9,7 @@
 import Foundation
 
 public struct WebServiceConstants{
-    static let DOMAIN_URL : String = "dleguis.net/ws/equation-gourmande/"
+    static let DOMAIN_URL : String = "http://dleguis.net/ws/equation-gourmande/"
     
     static let IMAGES_URL : String = "\(DOMAIN_URL)img/"
     

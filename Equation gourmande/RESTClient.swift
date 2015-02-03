@@ -10,23 +10,44 @@ import Foundation
 
 public class RESTClient: Client {
     
-    func getRecipe(id: Int) -> [String : [String : String]] {
-        
-        var recipe:[String : [String : String]] = ["toto" : ["toto1" : "toto1value"]]
+    func getRecipe(id: Int, completionHandler: (jsonRecipe: NSDictionary) -> ()) {
         
         request(.GET, "\(WebServiceConstants.ONE_RECIPE_URL)\(id)")
-            .response { (request, response, data, error) in
-                println(request)
-                println(response)
-                println(error)
+        .responseJSON { (request, response, JSON, error) in
+                println(JSON)
+            
+            
+            if let recipe = JSON as? NSDictionary {
                 
-                recipe = ["totomod" : ["toto1mod" : "toto1valuemod"]]
+                completionHandler(jsonRecipe: recipe)
                 
-                // recipe = (response as [String : [String : String]])
+            }
+            else {
+                println("impossible de caster le JSON")
+            }
+            
         }
-        
-        return recipe
-        
+                
+    }
+    
+    func getRecipesOfTheWeek(controller: FirstViewController) {
+        request(.GET, "\(WebServiceConstants.ALL_RECIPES_OF_THE_WEEK_URL)")
+        .responseJSON { (request, response, JSON, error) in
+                println(JSON)
+                
+            
+            if let recipes = JSON as? NSDictionary {
+                
+                for recipe in recipes {
+                    // controller.datepicker =
+                }
+            }
+            else {
+                println("impossible de caster le JSON")
+            }
+            
+                
+        }
     }
     
 }

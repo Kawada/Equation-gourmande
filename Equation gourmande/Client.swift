@@ -9,5 +9,7 @@
 import Foundation
 
 protocol Client {
-    func getRecipe(id:Int) -> [String:[String:String]]
+    func getRecipe(id: Int, completionHandler: (jsonRecipe: NSDictionary) -> ())
+    
+    func getRecipesOfTheWeek(controller:FirstViewController)
 }

@@ -20,17 +20,27 @@ class FirstViewController: UIViewController {
     
     private var photoDisposition : CGRect!
     
-    private var database : LevelDB!
-    
-    private let client : Client = RESTClient()
+    private var recipeService : RecipeService!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        recipeService = RecipeServiceImpl()
+        
+        
         println("appel du ws")
-        var test = client.getRecipe(2)
-        println("valeur récupérée : \(test)")
+        // Chargement asynchrone de la recette
+        recipeService.getRecipe(1, completionHandler: {
+            recipe in
+            
+            self.titleLabel.text = recipe.title
+            self.descriptionTextView.text = recipe.description
+            // self.myImage.image = UIImage(named: recipe.photos[0]?[1] as String)
+            
+        })
+        //println("valeur récupérée : \(test)")
         println("-----------------")
         
         
@@ -39,42 +49,10 @@ class FirstViewController: UIViewController {
         // Initialisation de l'UIImageViewModeScaleAspect
         myImage = UIImageViewModeScaleAspect(frame: photoDisposition)
         
-        // Création / chargement de la base locale
-        database = DatabaseFactory.loadDatabase();
         
-        println("entrée en base existante ?")
-        if let entry: AnyObject = database["31-01-2015"] {
-            println("Oui")
-            var test1:AnyObject! = entry["title"]
-            println("title : \(test1)")
-            
-        }
-        else {
-            println("Non")
-            
-            var entry:[String: [String: String]] = ["31-01-2015" : ["title" : "Sandwitch au caca original", "desc" : "Le seul, l'unique", "photo" : "photo-main-example"]]
-            
-            database.addEntriesFromDictionary(entry)
-            
-            
-            //database["31-01-2015"]["image"] = ("photo-main-example" as AnyObject)
-            //database["31-01-2015"]["title"] = ("Sandwitch au caca" as AnyObject)
-            
-            
-
-            var test:AnyObject! = database.valueForKey("31-01-2015");
-            
-            println("objet récupéré : \(test)");
-            
-            for item in database.allKeys() {
-                println("\(item)")
-            }
-        }
         
-        titleLabel.text = "Sandwitch au caca";
-        descriptionTextView.text = "Cette semaine nous allons voir la recette du sandwitch au caca. La recette de la poire à lavement d'hier" +
-                                   "a eu beaucoup de succès.\n" +
-                                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nUne tombola pour gagner son sandwitch au caca est prévue le 16 février 2015 à 13h ! \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        titleLabel.text = "Chargement...";
+        descriptionTextView.text = "Chargement en cours"
 
         // myImage = UIImageViewModeScaleAspect(frame: photoDisposition)
         myImage.contentMode = .ScaleAspectFill // Add the first contentMode
